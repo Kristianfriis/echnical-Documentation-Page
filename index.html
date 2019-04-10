@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+</head>
+<body>
+    <main id="main-doc">
+        <section class="main-section" id="what_is_HTML?">
+            <header>What is HTML?</header>
+            <p>HTML (<code>Hypertext Markup Language</code>) is not a programming language; it is a markup language used to tell your browser how to structure the web pages you visit. It can be as complicated or as simple as the web developer wishes it to be. HTML consists of a series of elements, which you use to enclose, wrap, or mark up different parts of the content to make it appear or act a certain way. The enclosing tags can make a bit of content into a hyperlink to link to another page on the web, italicize words, and so on.  For example, take the following line of content:</p>
+            <p>My cat is very grumpy</p>
+            <p>If we wanted the line to stand by itself, we could specify that it is a paragraph by enclosing it in a <code>paragraph</code>  (&lt;p&gt;) element:</p>
+            <p>&lt;p&gt;My cat is very grumpy&lt;/&gt;</p>
+        </section>
+        <section class="main-section" id="Anatomy_of_an_HTML_element">
+            <header>Anatomy of an HTML element</header>
+            <p>Let's explore our <code>paragraph</code> element a bit further:</p>
+            <img src="grumpy-cat-small.png" alt="Anatomy of an HTML element" id="anatomy_img">
+            <p>The main parts of our element are:</p>
+            <ol>
+                <li><strong>The opening tag:</strong> This consists of the name of the element (in this case, p), wrapped in opening and closing <strong>angle brackets</strong>. This states where the element begins or starts to take effect — in this case where the start of the paragraph is.</li>
+                <li><strong>The closing tag:</strong> This is the same as the opening tag, except that it includes a forward slash before the element name. This states where the element ends — in this case where the end of the paragraph is. Failing to include a closing tag is a common beginner error and can lead to strange results.</li>
+                <li><strong>The content:</strong> This is the content of the element, which in this case is just text.</li>
+                <li><strong>The element:</strong> The opening tag plus the closing tag plus the content equals the element.</li>
+            </ol>
+        </section>
+        <section class="main-section" id="Nesting_elements">
+            <header>Nesting elements</header>
+            <p>You can put elements inside other elements too — this is called <strong>nesting</strong>. If we wanted to state that our cat is <strong>very</strong> grumpy, we could wrap the word "very" in a &lt;strong&gt; element, which means that the word is to be strongly emphasized:</p>
+            <img src="strong_1.png">
+            <p>You do however need to make sure that your elements are properly nested: in the example above, we opened the p element first, then the strong element, therefore we have to close the strong element first, then the p. The following is incorrect:</p>
+            <img src="strong_2.png">
+            <p>The elements have to open and close correctly, so they are clearly inside or outside one another. If they overlap like above, then your web browser will try to make a best guess at what you were trying to say, and you may well get unexpected results. So don't do it!</p>
+        </section>
+        <section class="main-section" id="Block_versus_inline_elements">
+            <header>Block versus inline elements</header>
+            <p>There are two important categories of elements in HTML which you should know about. They are block-level elements and inline elements.</p>
+            <ul>
+                <li><code>Block-level elements</code> form a visible block on a page — they will appear on a new line from whatever content went before it, and any content that goes after it will also appear on a new line. Block-level elements tend to be structural elements on the page that represent, for example, paragraphs, lists, navigation menus, footers, etc. A block-level element wouldn't be nested inside an inline element, but it might be nested inside another block-level element.</li>
+                <li><code>Inline elements</code> are those that are contained within block-level elements and surround only small parts of the document’s content, not entire paragraphs and groupings of content. An inline element will not cause a new line to appear in the document; they would normally appear inside a paragraph of text, for example an &lt;a&gt; element (hyperlink) or emphasis elements such as &lt;em&gt; or &lt;strong&gt;.</li>
+            </ul>
+            <p>Take the following example:</p>
+            <img src="nested_1.png">
+            <p>&lt;em&gt; is an inline element, so as you can see below, the first three elements sit on the same line as one another with no space in between. On the other hand, &lt;p&gt; is a block-level element, so each element appears on a new line, with space above and below each (the spacing is due to default CSS styling that the browser applies to paragraphs).</p>
+        </section>
+        <section class="main-section" id="Empty_elements">  
+            <header>Empty elements</header>
+            <p>Not all elements follow the above pattern of opening tag, content, closing tag. Some elements consist only of a single tag, which is usually used to insert/embed something in the document at the place it is included. For example, the &lt;img&gt; element embeds an image file onto a page in the position it is included in:</p>
+            <img src="empty_1.png">
+            <p>This would output the following on your page:</p>
+            <img src="firefox-icon.png">
+            <p><strong>Note:</strong> Empty elements are also sometimes called void elements.</p>
+        </section>
+    </main>
+    <nav id="navbar">
+        <header>HTML</header>
+        <a class="nav-link" href="#what_is_HTML?">What is HTML?</a>
+        <a class="nav-link" href="#Anatomy_of_an_HTML_element">Anatomy of an HTML element</a>
+        <a class="nav-link" href="#Nesting_elements">Nesting elements</a>
+        <a class="nav-link" href="#Block_versus_inline_elements">Block versus inline elements</a>
+        <a class="nav-link" href="#Empty_elements">Empty elements</a>
+    </nav>
+
+
+</body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
